@@ -1,6 +1,6 @@
 
 0. 구조
- [Windows]
+ [Windows] -> Windows는 IDE와 Docker Desktop만 설치
    └── VSCode (UI)
    └── Docker Desktop (WSL2 Backend)
    └── WSL Ubuntu (Linux VM)
@@ -21,10 +21,9 @@
   - # sudo passwd root
   - # su -
  2) UPDATE
-  - sudo apt update
-  - sudo apt upgrade -y   3) PYTHON 설치
-  - sudo apt install python3 python3-pip python3-venv -y
-  - sudo apt install build-essential curl wget -y
+  - # sudo apt update && sudo apt upgrade -y
+  - # sudo apt install git python3 python3-pip python3-venv -y
+  - # sudo apt install build-essential curl wget -y
  3) wsl Ubuntu에서 삭제 및 확인
   - # 삭제 -> # wsl --unregister Ubuntu
   - # 확인 -> # wsl -l -v
