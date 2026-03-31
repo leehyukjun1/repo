@@ -40,5 +40,12 @@
   - 2. git add (staging)
   - 3. git commit (로컬 저장)
   - 4. git push (서버 업로드)
+  - 명령어
+   # git status     # 현재 상태 확인
+   # git remote -v  # 원격 저장소 확인
+   # git branch     # 브랜치 확인
+   # git add .
+   # git commit -m "update"
+   # git push -u origin main
 
 
