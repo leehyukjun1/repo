@@ -1,0 +1,29 @@
+
+1. WSL 설치
+ 1) # wsl --install -d Ubuntu
+
+2. UBUNTU 설치
+ 1) WSL 안에서 설치
+
+
+3. VSCODE 설치
+ 1) https://code.visualstudio.com
+
+
+4. Docker 설치
+ 1) VSCODE에서 설치 
+
+
+5. GIT 설치 
+ 1) VSCODE 좌측 3번째 아이콘에서 설치
+ 2) 웹 브라우저에서 다운로드 후 설치 -> PATH 등록 설정
+ 3) 아래 코드를 프로젝트 폴더에서 실행(파워쉘)
+
+git init							# git 설정 초기화
+git config --global user.name "mercy"			# 사용자 정보 설정
+git config --global user.email "leehyukjun1@gmail.com"
+git add .							# 현재 위치 모두 스테이징 
+git commit -m "first commit"				# 로컬 저장
+
+
+
