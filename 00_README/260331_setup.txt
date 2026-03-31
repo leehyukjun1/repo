@@ -16,7 +16,10 @@
    - # wsl --install -d Ubuntu
 
 2. UBUNTU 설치
- 1) WSL 안에서 설치
+ 1) root 계정 설정
+  - # sudo -i
+  - # sudo passwd root
+  - # su -
  2) UPDATE
   - sudo apt update
   - sudo apt upgrade -y 
@@ -28,19 +31,26 @@
  1) https://code.visualstudio.com 다운로드 후 설치
  2) Theme(File → Preferences → Color Theme)
  3) 탐색기에서 개발 폴더 생성 -> 파워쉘 해당 위치에서 'code .' 입력
- 3) Extension Pack
+ 4) Extension Pack
   - Language : Python, Pylance
   - DevOps : Docker, Dev Containers, Remote-SSH
   - API    : REST Client, GitLens
   - Log    : PostGre, Log Viewer
   - AI     : Windsurf, Github Copilot, ChatGPT
-
+  5) 삭제 방법
+   - Program 삭제
+   - 설정삭제 ->C:\Users\<사용자명>\AppData\Roaming\Code
+   - 설정삭제 ->C:\Users\<사용자명>\.vscode
+   - 캐시삭제 ->C:\Users\<사용자명>\.gitconfig
+   
 4. Docker 설치
  1) Windows Desktop 설치(Windows) 
 
 5. GIT 설치 
  1) wsl Ubuntu에서 설치
   - # sudo apt install git -y
+  - # 삭제 -> # wsl --unregister Ubuntu
+  - # 확인 -> # wsl -l -v
  2) 환경설정(개발 폴더에서 진행)
   - git init							                    # git 설정 초기화(최초1회)
   - git config --global user.name "mercy"	    # 사용자 정보 설정
