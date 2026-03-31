@@ -1,6 +1,19 @@
 
+0. 구조
+ [Windows]
+   └── VSCode (UI)
+   └── Docker Desktop (WSL2 Backend)
+   └── WSL Ubuntu (Linux VM)
+ [WSL Ubuntu] ← 실제 개발 환경
+   ├── git      
+   ├── python
+   ├── Source Code      
+   └── venv
+
 1. WSL 설치
- 1) # wsl --install -d Ubuntu
+ 1) 윈도우 11 파워쉘
+   - # wsl --update
+   - # wsl --install -d Ubuntu
 
 2. UBUNTU 설치
  1) WSL 안에서 설치
@@ -9,6 +22,7 @@
   - sudo apt upgrade -y 
   3) PYTHON 설치
   - sudo apt install python3 python3-pip python3-venv -y
+  - sudo apt install build-essential curl wget -y
 
 3. VSCODE 설치
  1) https://code.visualstudio.com 다운로드 후 설치
@@ -21,21 +35,19 @@
   - Log    : PostGre, Log Viewer
   - AI     : Windsurf, Github Copilot, ChatGPT
 
-
 4. Docker 설치
- 1) VSCODE에서 설치 
-
+ 1) Windows Desktop 설치(Windows) 
 
 5. GIT 설치 
- 1) https://git-scm.com/install/windows
- 2) 브라우저에서 다운로드 후 설치 -> PATH 등록 설정
- 3) 아래 코드를 프로젝트 폴더에서 실행(파워쉘)
-  - git init							                    # git 설정 초기화
+ 1) wsl Ubuntu에서 설치
+  - # sudo apt install git -y
+ 2) 환경설정(개발 폴더에서 진행)
+  - git init							                    # git 설정 초기화(최초1회)
   - git config --global user.name "mercy"	    # 사용자 정보 설정
   - git config --global user.email "leehyukjun1@gmail.com"
   - git add .							                    # 현재 위치 모두 스테이징 
   - git commit -m "first commit"				      # 로컬 저장
-  4) 파일 수정하여 git 서버에 등록하는 순서
+ 3) 파일 수정하여 git 서버에 등록하는 순서
   - 1. 파일 수정 (Working Directory)
   - 2. git add (staging)
   - 3. git commit (로컬 저장)
@@ -47,5 +59,5 @@
    # git add .
    # git commit -m "update"
    # git push -u origin main
-
+   # 싱크 안 맞을 경우 -> git pull --rebase origin main 후 위 push 실행
 
